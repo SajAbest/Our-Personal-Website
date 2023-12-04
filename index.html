@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="Styles/home.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="Asset/bg-1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="Asset/bg-2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="Asset/bg-3.jpg" style="width:100%">
+        </div>
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+    <img src="Asset/QCU logo.png" alt="" class="logo">
+    <h1 class="home">WELCOME TO OUR HUMBLE WEBSITE</h1>
+    
+    <div class="container-1">
+        <img src="Asset/JCA.png" alt="" class="jca">
+        <div class="overlay">
+            <h1 class="name-1">Justine C. Abestilla</h1>
+            <p class="p1">Hello, click more to know me.
+                <a href="Abestilla.html" class="more">
+                    <button class="button-1">MORE</button>
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="container-2">
+        <img src="Asset/dar.jpg" alt="" class="dar">
+        <div class="overlay">
+            <h1 class="name-2">John Rex Catedral Landar </h1>
+            <p class="p2">Hello, click more to know me.
+                <a href="Landar.html" class="more">
+                    <button class="button-2">MORE</button>
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="container-3">
+        <img src="Asset/luc.jpg" alt="" class="luki">
+        <div class="overlay">
+            <h1 class="name-3">Lucker B. Grana</h1>
+            <p class="p3">Hello, click more to know me.
+                <a href="Grana.html" class="more">
+                    <button class="button-3">MORE</button>
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="container-4">
+        <img src="Asset/von.jpg" alt="" class="von">
+        <div class="overlay">
+            <h1 class="name-4"> Vaughn Elijah Lagmay </h1>
+            <p class="p4">Hello, click more to know me.
+                <a href="Lagmay.html" class="more">
+                    <button class="button-4">MORE</button>
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="container-5">
+        <img src="Asset/herb.jpg" alt="" class="herb">
+        <div class="overlay">
+            <h1 class="name-5">Herbert N. Huelva </h1>
+            <p>Hello, click more to know me.
+                <a href="Huelva.html" class="more">
+                    <button class="button-5">MORE</button>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); 
+        }
+    </script>
+</body>
+</html>
