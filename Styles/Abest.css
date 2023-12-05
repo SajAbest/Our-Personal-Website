@@ -1,0 +1,230 @@
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+
+body {
+   min-height: 100vh;
+   background: #0c192c;
+}
+.container{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+}
+
+
+   
+
+.container-text h1{
+   height: 200vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   right: 0;
+   left: 0;
+   top: 200px;
+   bottom: 0;
+   margin: auto;
+   color: white;
+      
+   }
+   .container-text h2{
+      
+      height: 200vh;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 275px;
+      bottom: 0;
+      margin: auto;
+      color: white;
+}
+.container img {
+   height: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 500px;
+   bottom: 0;
+   margin: auto;
+   margin-top: 290px;
+   margin-left: 490px;
+    animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: 1000;
+      border-radius: 70px;
+    }
+    
+    @keyframes example {
+      0%   { left:0px; top:0px;}
+      25%  { left:200px; top:0px;}
+      50%  { left:200px; top:200px;}
+      75%  { left:0px; top:200px;}
+      100% { left:0px; top:0px;}
+    }
+.bubbles {
+   position: relative;
+   display: flex;
+}
+.bubbles span {
+   position: relative;
+   width: 30px;
+   height: 30px;
+   background: #4fc3dc;
+   margin: 0 4px;
+   border-radius: 50%;
+   box-sizing: 0 0 0 10px #4fc3dc44,
+          0 0 50px #4fc3dc,
+          0 0 100px #4fc3dc;
+   animation: animate 15s linear infinite;
+   animation-duration: calc(125s / var(--1));
+}
+.bubbles span:nth-child(even){
+   background: #ff2d75;
+   box-shadow: 0 0 0 10px #ff2d7544,
+   0 0 50px #ff2d75,
+   0 0 100px #ff2d75;
+}
+@keyframes animate{
+   0%
+   {
+      transform: translateY(100vh) scale(0);
+   }
+   100%
+   {
+      transform: translateY(-10vh) scale(1);
+   }
+
+}
+.about{
+   min-height: 100vh;
+   width: 100%;
+   padding: 78px 0px;
+   background-color: #191919;
+}
+.about .my-pic{
+   border: 2px solid #faf8f8;
+   box-shadow: 0 0 5px #ffffff,
+                0 0 25px #fefbfb;
+   height: auto; 
+   width: 430px;
+   border-radius: 215px; 
+   transition: 0.10s ease;  
+ }
+
+.about-text{
+   width: 550px;
+   margin: 5em;
+   margin-bottom: 25px;
+   float: left;
+}
+main{
+   width: 1130px;
+   max-width: 95%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+  }
+
+  .about-text h1{
+   color: white;
+   font-size: 50px;
+   text-transform: capitalize;
+   margin: 0.5em;
+   margin-left: 0px;
+
+  }
+
+  .about-text h5{
+   color: white;
+   font-size: 28px;
+   text-transform: 25px;
+   margin-bottom: 0.4em;
+  }
+
+  span{
+   color: #f30a0a;
+  }
+ul li{
+    color: white;
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: 15px;
+    font-size: 18px;
+}
+.info {
+font-weight: bold;
+font-size: 25px;
+margin-top: 15px;
+margin-bottom: 15px;
+color: gray;
+}
+ .contact-icons{
+    display: flex;
+   display: block;
+   width: 300px;
+   margin-left: 80px;
+   
+ }
+.contact{
+    color: white;
+}
+ .fb,
+ .phone,
+ .email{
+    width: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+ }
+
+ .contact-num {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    color: white;
+    left: 190px;
+    font-size: 12px;
+    bottom: 45px;
+    width: 40px;
+    height: 40px;
+     
+  }
+  
+  .contact-num .number {
+    visibility: hidden;
+    width: 80px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    border:3px solid black;
+    bottom: 100%;
+    left: 40px;
+    margin-left: -60px;
+    background-color:white;
+    opacity: 0;
+    transition: opacity 1s;
+    
+  }
+  
+  .contact-num:hover .number {
+    visibility: visible;
+    opacity: 1;
+  }
